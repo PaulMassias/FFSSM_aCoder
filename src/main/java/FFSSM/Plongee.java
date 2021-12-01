@@ -4,8 +4,8 @@
 package FFSSM;
 
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+
 
 public class Plongee {
 
@@ -18,6 +18,8 @@ public class Plongee {
 	public int profondeur;
 
 	public int duree;
+        
+        public ArrayList<Plongeur> listePlongeurs;
 
 	public Plongee(Site lieu, Moniteur chefDePalanquee, LocalDate date, int profondeur, int duree) {
 		this.lieu = lieu;
@@ -25,6 +27,8 @@ public class Plongee {
 		this.date = date;
 		this.profondeur = profondeur;
 		this.duree = duree;
+                this.listePlongeurs=new ArrayList();
+                
 	}
 
 	public void ajouteParticipant(Plongeur participant) {
@@ -43,6 +47,11 @@ public class Plongee {
 	 * @return vrai si la plongée est conforme
 	 */
 	public boolean estConforme() {
+            
+            for(Plongeur p :listePlongeurs){
+                
+                p.getLicence.EstValide();
+            }
 		// TODO: Implémenter cette méthode
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
