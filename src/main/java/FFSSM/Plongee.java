@@ -47,13 +47,13 @@ public class Plongee {
 	 * @return vrai si la plongée est conforme
 	 */
 	public boolean estConforme() {
-            
             for(Plongeur p :listePlongeurs){
-                
-                p.getLicence.EstValide();
+                Licence licence = p.getLicence();
+                if(licence.estValide(this.date)==false){
+                    return false;
+                }
             }
-		// TODO: Implémenter cette méthode
-		throw new UnsupportedOperationException("Pas encore implémenté");
+            return true;
 	}
 
 }
