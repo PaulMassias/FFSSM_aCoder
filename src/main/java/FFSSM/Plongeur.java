@@ -19,6 +19,9 @@ public class Plongeur extends Personne {
         }
         
         
+        public void ajouterLicence(Licence l){
+            this.maLicence=l;
+        }
         //ajouterLicence
                 
         //dernièreLicence

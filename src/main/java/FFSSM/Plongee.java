@@ -32,8 +32,7 @@ public class Plongee {
 	}
 
 	public void ajouteParticipant(Plongeur participant) {
-		// TODO: Implémenter cette méthode
-		throw new UnsupportedOperationException("Pas encore implémenté");
+		listePlongeurs.add(participant);
 	}
 
 	public LocalDate getDate() {
